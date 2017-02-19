@@ -1,0 +1,33 @@
+.side-menu__wrapper {
+  width: 300px;
+  margin-right: 80px;
+}
+.side-menu {
+  @extend %clearfix;
+  float: left;
+  height: 100%;
+  text-align: right;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "RobotoRegular";
+
+  ul li {
+    list-style-type: none;
+  }
+}
+.side-menu-list__item{
+
+}
+.side-menu-list__item {
+  margin-bottom: 41px;
+}
+.side-menu-list__link {
+  text-decoration: none;
+  color: $textblue;
+}
+.side-menu-list__link--activ {
+  text-decoration: none;
+  color:#4e8839;
+  font-family: "RobotoBold";
+  border-right: 2px solid #4e8839;
+}

@@ -1,6 +1,16 @@
+$textblue: #455a64;
+$backblue: #faf8f0;
+
 body {
-  margin: 0;
+  background-color: $backblue;
 }
+
+@import 'common/mixins';
+@import 'common/header';
+@import 'common/blog-page-main';
+@import 'common/blog-content';
+@import 'common/side-menu';
+@import 'common/footer';
 @import 'common/spriteGif';
 @import 'common/spritePng';
 @import 'common/greating';
