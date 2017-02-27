@@ -1,7 +1,69 @@
-extends ../_template
-
-block variables
-  - var title = 'Home page'
-
-block content
-  include ../common/_greating
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='assets/css/app.css')
+        title Личный сайт
+    body
+        .index__wrapper
+            input#switcher-index.index__switcher(type='checkbox', name='switcher-index')
+            header.index__header
+                label.index__authoriz(for='switcher-index') Авторизоваться
+            main.page-main
+                .flipper
+                    .authoriz
+                        h1.title.title--small.title--login Авторизуйтесь
+                        form.authoriz__form(method='POST', action='#')
+                            .authoriz__enter
+                                input#name.authoriz__login(type='text', name='login', placeholder='Логин')
+                                label.authoriz__label.authoriz__label--enter(for='name')
+                                    svg
+                                        use(xlink:href='assets/img/sprite.svg#login')
+                            .authoriz__enter.authoriz__enter--last
+                                input#password.authoriz__password(type='password', name='password', placeholder='Пароль')
+                                label.authoriz__label.authoriz__label--enter(for='password')
+                                    svg
+                                        use(xlink:href='assets/img/sprite.svg#password')
+                            fieldset.authoriz__checkout
+                                input#human(type='checkbox', name='login')
+                                label.authoriz__label.authoriz__label--check(for='human') Я человек
+                            fieldset.authoriz__checkout.authoriz__checkout--last
+                                legend.authoriz__legend Вы точно не робот?
+                                input#radio-yes(type='radio', name='answer', value='yes')
+                                label.authoriz__label.authoriz__label--radio(for='radio-yes') Да
+                                input#radio-no(type='radio', name='answer', value='no')
+                                label.authoriz__label.authoriz__label--radio(for='radio-no') Не уверен
+                            .btn
+                                label.btn__item.btn__item--index(for='switcher-index').
+                                    На главную
+                                button.btn__item.btn__item--enter(type='submit').
+                                    Войти
+                    .welcome-section
+                        .info--index.info
+                            .info__image
+                                img(src='assets/img/avatar.jpg', width='141', height='141', alt='Это я!')
+                            h2.info__name.
+                                Владимир Астахов
+                            p.info__desc.
+                                Личный сайт веб разработчика
+                        .social-btns.social-btns--index
+                            a.social-btn.social-btn--vk(href='http://vk.com', target='_blank')
+                                span vkontakte
+                                svg
+                                    use(xlink:href='assets/img/sprite.svg#vk')
+                            a.social-btn.social-btn--git(href='http://github.com', target='_blank')
+                                span github
+                                svg
+                                    use(xlink:href='assets/img/sprite.svg#github')
+                            a.social-btn.social-btn--in(href='http://linkedin.com', target='_blank')
+                                span linkedin
+                                svg
+                                    use(xlink:href='assets/img/sprite.svg#in')
+                        .btn
+                            a.btn__item.btn__item--works(href='works.html') Мои работы
+                            a.btn__item.btn__item--about(href='about.html') Обо мне
+                            a.btn__item.btn__item--blog(href='blog-page.html') Блог
+            footer.page-footer.page-footer--index
+                p.page-footer__author.page-footer__author--index.
+                    © Владимир Астахов | Создано с любовью в LoftSchool | 2016

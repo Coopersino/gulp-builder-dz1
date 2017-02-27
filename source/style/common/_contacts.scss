@@ -1,0 +1,148 @@
+.contacts {
+  position: absolute;
+  bottom: 864px;
+  left: 50%;
+  margin-left: -160px;
+  width: 320px;
+  height: 280px;
+  background-color: rgba(#fcfcfc, .85);
+
+  &__item {
+    @include fonts(16px, 500, 24px, rgba(#5f5a55, .8));
+    margin: 0 0 16px 24px;
+    padding-left: 5px;
+    display: block;
+    fill: $asparagus;
+
+    &:hover {
+      fill: $fermGreen;
+      color: #5f5a55;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 6px;
+    }
+
+    &--skype {
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &--email {
+      margin-bottom: 16px;
+
+      svg {
+        width: 23px;
+        height: 16px;
+        margin-top: 5px;
+      }
+    }
+
+    &--phone {
+      padding-left: 9px;
+
+      svg {
+        width: 17px;
+        height: 20px;
+        margin-top: 2px;
+      }
+
+      span {
+        padding-left: 9px;
+      }
+    }
+
+    &--address {
+      padding-left: 10px;
+
+      svg {
+        width: 16px;
+        height: 21px;
+        margin-left: -1px;
+      }
+
+      span {
+        padding-left: 10px;
+      }
+    }
+  }
+
+
+  @media only screen and #{$width768} {
+    width: 348px;
+    margin-left: -174px;
+    height: 302px;
+    bottom: 432px;
+    background-color: rgba(#fcfcfc, .85);
+    border-radius: 5px;
+
+    &__item {
+      margin: 0 0 15px 14px;
+
+      &--skype {
+        margin-bottom: 14px;
+      }
+
+      &--email {
+        margin-bottom: 16px;
+      }
+
+      &--address {
+        svg {
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+
+  @media only screen and #{$width1200} {
+    bottom: 433px;
+    width: 380px;
+    height: 314px;
+    margin-left: -190px;
+
+    &__item {
+      margin: 0 0 15px 35px;
+      padding-left: 5px;
+
+      span {
+        padding-left: 6px;
+      }
+
+      &--skype {
+        margin-bottom: 14px;
+      }
+
+      &--email {
+        margin-bottom: 16px;
+      }
+
+      &--phone {
+        padding-left: 9px;
+
+        span {
+          padding-left: 9px;
+        }
+      }
+
+      &--address {
+        padding-left: 10px;
+
+        span {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+
+  @media only screen and #{$width1800} {
+    bottom: 470px;
+    height: 312px;
+    margin-right: 10px;
+  }
+
+}

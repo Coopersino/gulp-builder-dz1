@@ -1,16 +1,82 @@
-$textblue: #455a64;
-$backblue: #faf8f0;
+$asparagus: #6c9c5a;
+$fermGreen: #4e8839;
+
+$bush60: rgba(#122620, .6);
+$desertStorm: #f8f9f5;
+$greenWhite: #ebefe2;
+$pampas: #f4f5f0;
+
+$capeCode: #373e42;
+$chicago: #566358;
+
+$mobile-only: (max-width: 699px);
+$width768: (min-width: 768px);
+$width1200: (min-width: 1200px);
+$width1800: (min-width: 1800px);
 
 body {
-  background-color: $backblue;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  padding-left: 0;
+}
+ul li {
+  list-style: none;
 }
 
-@import 'common/mixins';
-@import 'common/header';
-@import 'common/blog-page-main';
-@import 'common/blog-content';
-@import 'common/side-menu';
-@import 'common/footer';
-@import 'common/spriteGif';
-@import 'common/spritePng';
-@import 'common/greating';
+@mixin fonts($size, $weight, $height, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  color: $color;
+}
+
+@mixin doubleTriangle($height, $color) {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: $height;
+  width: 100%;
+  background: linear-gradient(to right top, $color 50%, transparent 50%) no-repeat 0 0,
+  linear-gradient(to left top, $color 50%, transparent 50%) no-repeat 100% 0;
+  background-size: 50% 100%;
+  z-index: 10;
+}
+
+@mixin arrow($width, $widthBorder, $rotate, $color, $bottom) {
+  position: absolute;
+  left: 50%;
+  bottom: $bottom;
+  width: $width;
+  height: $width;
+  border: $widthBorder solid $color;
+  border-top-width: 0;
+  border-right-width: 0;
+  transform: translateX(-50%) rotate($rotate);
+  cursor: pointer;
+  z-index: 10;
+}
+
+@import "common/_page-header";
+@import "common/_index";
+@import "common/_page-footer";
+@import "common/authoriz";
+@import "common/_page-main";
+@import "common/welcome-section";
+@import "common/social-btns";
+@import "common/_btn";
+@import "common/_flipper";
+@import "common/global";
+@import "common/info";
+@import "common/_map";
+@import "common/about-me";
+@import "common/contact";
+@import "common/_contacts";
+@import "common/techno";
+@import "common/_title";
+@import "common/skills";
+@import "common/_resume";
+@import "common/reviews";
+@import "common/public";
+@import "common/overlay";

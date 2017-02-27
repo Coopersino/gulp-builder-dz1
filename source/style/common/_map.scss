@@ -1,0 +1,19 @@
+.map {
+  height: 1143px;
+  background: url('../img/background-map-phone.jpg') no-repeat top right;
+
+  @media only screen and #{$width768} {
+    height: 906px;
+    background: url('../img/background-map-tablet.jpg') no-repeat top right;
+  }
+
+  @media only screen and #{$width1200} {
+    height: 973px;
+    background: url('../img/background-map-desktop.jpg') no-repeat top right;
+  }
+
+  @media only screen and #{$width1800} {
+    height: 1110px;
+    background: url('../img/background-map-desktop.jpg') no-repeat top right / cover;
+  }
+}

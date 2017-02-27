@@ -1,0 +1,84 @@
+.about-me {
+  background-color: $greenWhite;
+
+  &__wrapper {
+    max-width: 460px;
+    margin: 0 auto;
+  }
+
+  &__avatar {
+    display: block;
+    margin-bottom: 23px;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__desc {
+    padding: 0 10px 22px;
+    min-height: 283px;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__summar {
+    @include fonts(14px, 400, 24px, $chicago);
+    margin: 0 0 10px;
+  }
+
+  @media only screen and #{$width768} {
+    &__wrapper {
+      max-width: 474px;
+      margin: 0 auto;
+    }
+
+    &__avatar {
+      margin-bottom: 42px;
+    }
+
+    &__desc {
+      padding: 0;
+      min-height: 260px;
+    }
+  }
+
+
+  @media only screen and #{$width1200} {
+    width: 50%;
+    min-height: 854px;
+
+    &__wrapper {
+      margin: -32px auto 0;
+    }
+
+    &__avatar {
+      margin-bottom: 13px;
+    }
+
+    &__desc {
+      padding: 0 17px;
+    }
+
+    &__summar {
+      font-size: 16px;
+    }
+  }
+
+
+  @media only screen and #{$width1800} {
+    position: relative;
+
+    &__wrapper {
+      margin: 20px 6px 0 auto;
+    }
+
+    &__avatar {
+      margin-bottom: 12px;
+    }
+  }
+
+}

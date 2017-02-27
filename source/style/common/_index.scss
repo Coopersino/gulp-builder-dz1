@@ -1,0 +1,86 @@
+.index {
+  &__wrapper {
+    height: 100%;
+    min-height: 568px;
+    min-width: 320px;
+    background: #5f7b48;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: url('../img/water.jpg') no-repeat center / cover;
+  }
+
+  &__header {
+    flex: 0 0 auto;
+    padding-top: 10px;
+    align-self: center;
+    z-index: 20;
+  }
+
+  &__authoriz {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 37px;
+    color: #fff;
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    margin-right: 2px;
+    padding: 0 15px 1px 21px;
+
+    &:hover {
+      border-color: #729e19;
+      background-color: #4e8839;
+    }
+  }
+
+  &__switcher {
+    display: none;
+
+    &:checked ~ .page-main {
+
+      .welcome-section {
+        transform: rotateY(180deg);
+      }
+
+      .authoriz {
+        transform: rotateY(0deg);
+      }
+    }
+
+    &:checked ~ .index__header {
+      .index__authoriz {
+        visibility: hidden;
+      }
+    }
+  }
+
+  @media only screen and #{$width768} {
+    &__wrapper {
+      min-height: 800px;
+    }
+
+    &__header {
+      flex: 0 0 auto;
+      padding-top: 20px;
+      align-self: flex-end;
+    }
+
+    &__authoriz {
+      font-size: 16px;
+      margin-right: 20px;
+      padding: 1px 27px 5px;
+    }
+  }
+
+  @media only screen and #{$width1200} {
+    &__wrapper {
+      min-height: 700px;
+    }
+  }
+}

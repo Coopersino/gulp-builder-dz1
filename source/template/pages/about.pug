@@ -1,4 +1,147 @@
-extends ../_template
-
-block content
-    include ../common/_footer
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='assets/css/app.css')
+        title Обо мне
+    body
+        .wrapper
+            header#header.page-header--about.page-header
+                a.page-header__arrow(href='#footer')
+                .page-header__menu
+                    .social-btns
+                        a.social-btn.social-btn--vk(href='http://vk.com', target='_blank')
+                            span vkontakte
+                            svg
+                                use(xlink:href='assets/img/sprite.svg#vk')
+                        a.social-btn.social-btn--git(href='http://github.com', target='_blank')
+                            span github
+                            svg
+                                use(xlink:href='assets/img/sprite.svg#github')
+                        a.social-btn.social-btn--in(href='http://linkedin.com', target='_blank')
+                            span linkedin
+                            svg
+                                use(xlink:href='assets/img/sprite.svg#in')
+                .info
+                    .info__image
+                        img(src='assets/img/avatar.jpg', width='141', height='141', alt='Это я!')
+                    h2.info__name.
+                        Владимир Астахов
+                    p.info__desc.
+                        Личный сайт веб разработчика
+            main.page-main
+                section.resume
+                    section.about-me
+                        .about-me__wrapper
+                            h1.title.title--big.title--about Обо мне
+                            picture.about-me__avatar
+                                source(media='(min-width:1800px)', srcset='assets/img/avatar-big-desktop.jpg')
+                                source(media='(min-width:1200px)', srcset='assets/img/avatar-desktop.jpg')
+                                source(media='(min-width:768px)', srcset='assets/img/avatar-tablet.jpg')
+                                img(src='assets/img/avatar-phone.jpg', alt='Это я!')
+                            article.about-me__desc
+                                h3.title.title--small.title--me Кто я
+                                p.about-me__summar.
+                                    Я веб разработчик из Новосибирска. Мне 27 лет.
+                                    Я занимаюсь разработкой современных сайтов и приложений.
+                                    Мне нравится делать интересные и современные проекты.
+                                p.about-me__summar.
+                                    Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+                                    Чуть позже я освежу в нём свой контент. А пока посмотрите,
+                                    как тут всё классно и красиво!
+                    section.skills
+                        .skills__wrapper
+                            h3.title.title--small.title--skills.
+                                Чем я могу быть вам полезен
+                            p.skills__desc.
+                                Больше всего меня привлекет Frontend разработка,
+                                но я также знаком и могу решать не сложные задачи на Backend.
+                                Но давайте по порядку.
+                            .skills__items
+                                .techno
+                                    h4.techno__title Frontend
+                                    .techno__items.techno__items--front
+                                        .techno__item.techno__item--html
+                                            span.techno__name html5
+                                        .techno__item.techno__item--css
+                                            span.techno__name css3
+                                        .techno__item.techno__item--script
+                                            span.techno__name JavaScript & jQuery
+                                .techno
+                                    h4.techno__title Backend
+                                    .techno__items.techno__items--back
+                                        .techno__item.techno__item--php.techno__item--less
+                                            span.techno__name php
+                                        .techno__item.techno__item--sql
+                                            span.techno__name mySQL
+                                        .techno__item.techno__item--node.techno__item--less
+                                            span.techno__name Node.js & npm
+                                        .techno__item.techno__item--mongo
+                                            span.techno__name Mongo.db
+                                .techno
+                                    h4.techno__title WorkFlow
+                                    .techno__items.techno__items--flow
+                                        .techno__item.techno__item--git
+                                            span.techno__name Git
+                                        .techno__item.techno__item--gulp
+                                            span.techno__name Gulp
+                                        .techno__item.techno__item--bower
+                                            span.techno__name Bower
+                section.map
+                .contacts
+                    h3.title.title--small.title--contacts Контакты
+                    a.contacts__item.contacts__item--skype(href='skype:skype_kdn?chat')
+                        svg
+                            use(xlink:href='assets/img/sprite.svg#skype')
+                        span skype_kdn
+                    a.contacts__item.contacts__item--email(href='mailto:astahov@gmail.com')
+                        svg
+                            use(xlink:href='assets/img/sprite.svg#email')
+                        span astahov@gmail.com
+                    a.contacts__item.contacts__item--phone(href='tel:+79312009324')
+                        svg
+                            use(xlink:href='assets/img/sprite.svg#phone')
+                        span +7 931 200 93 24
+                    a.contacts__item.contacts__item--address
+                        svg
+                            use(xlink:href='assets/img/sprite.svg#map_marker')
+                        span Новосибирск, ул. Инская, д.14
+            .overlay
+                .overlay__links
+                    a.overlay__link.overlay__link--works(href='works.html') Мои работы
+                    a.overlay__link.overlay__link--about(href='about.html') Обо мне
+                    a.overlay__link.overlay__link--blog(href='blog.html') Блог
+                    a.overlay__link.overlay__link--authoriz(href='index.html') Авторизация
+            footer#footer.page-footer
+                .page-footer__wrapper
+                    p.page-footer__message.
+                        Этот сайт я сделал в рамках обучения в Школе онлайн
+                        образования LoftSchool.
+                    .page-footer__links-content
+                        .page-footer__links
+                            a.page-footer__link(href='works.html') Мои работы
+                            a.page-footer__link(href='about.html') Обо мне
+                            a.page-footer__link(href='blog-page.html') Блог
+                            a.page-footer__link(href='index.html') Авторизация
+                        .social-btns.social-btns--footer
+                            a.social-btn.social-btn--vk(href='http://vk.com', target='_blank')
+                                span vkontakte
+                                svg
+                                    use(xlink:href='assets/img/sprite.svg#vk')
+                            a.social-btn.social-btn--git(href='http://github.com', target='_blank')
+                                span github
+                                svg
+                                    use(xlink:href='assets/img/sprite.svg#github')
+                            a.social-btn.social-btn--in(href='http://linkedin.com', target='_blank')
+                                span linkedin
+                                svg
+                                    use(xlink:href='assets/img/sprite.svg#in')
+                    .page-footer__quote
+                        blockquote.page-footer__quote-content.
+                            Всегда пишите код так, будто сопровождать его будет
+                            склонный к насилию психопат, который знает, где вы
+                            живете.
+                        cite.page-footer__quote-author – Martin Golding
+                p.page-footer__author.
+                    © Владимир Астахов | Создано с любовью в LoftSchool | 2016

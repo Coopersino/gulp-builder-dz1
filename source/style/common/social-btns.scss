@@ -1,0 +1,190 @@
+.social{
+  &-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 126px;
+    padding-top: 4px;
+    font-size: 0;
+
+    &--footer,
+    &--index {
+      width: 142px;
+      margin: 0 auto;
+
+      .social-btn {
+        &--vk {
+          margin-top: 2px;
+
+          svg {
+            height: 17px;
+            width: 32px;
+          }
+        }
+
+        &--git {
+          margin: 0 1px -2px -3px;
+
+          svg {
+            height: 22px;
+            width: 26px;
+          }
+        }
+
+        &--in {
+          margin-right: 4px;
+
+          svg {
+            height: 21px;
+            width: 22px;
+          }
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    &--footer {
+      .social-btn {
+        opacity: .5;
+
+        &:hover {
+          fill: #fff;
+        }
+      }
+    }
+
+    &--index {
+      margin-bottom: 42px;
+
+      .social-btn {
+        opacity: .6;
+
+        &:hover {
+          fill: $fermGreen;
+        }
+      }
+    }
+  }
+
+  &-btn {
+    fill: #fff;
+
+    &--vk {
+      margin-top: 2px;
+      svg {
+        width: 25px;
+        height: 13px;
+      }
+    }
+
+    &--git {
+      margin: 0 0 -2px -3px;
+
+      svg {
+        width: 21px;
+        height: 17px;
+      }
+    }
+
+    &--in {
+      margin: -1px 1px 0 0;
+
+      svg {
+        width: 19px;
+        height: 17px;
+      }
+    }
+
+    &:hover {
+      fill: $asparagus;
+      opacity: 1;
+    }
+  }
+
+
+  @media only screen and #{$width768} {
+    &-btns {
+      padding-top: 1px;
+      width: 137px;
+
+      &--footer {
+        width: 142px;
+        margin: 0;
+
+        .social-btn{
+          &--in {
+            margin-right: 6px;
+          }
+        }
+      }
+
+      &--index {
+        .social-btn {
+          &--in {
+            margin-right: 1px;
+          }
+        }
+      }
+    }
+
+    &-btn {
+      &--vk {
+        svg {
+          height: 17px;
+          width: 32px;
+        }
+      }
+
+      &--git {
+        margin: 0 0 0 -5px;
+
+        svg {
+          height: 22px;
+          width: 26px;
+        }
+      }
+
+      &--in {
+        margin: -1px 0 0;
+
+        svg {
+          height: 21px;
+          width: 22px;
+        }
+      }
+    }
+  }
+
+  @media only screen and #{$width1200} {
+    &-btns {
+      &--index {
+        width: 140px;
+        .social-btn {
+          &--in {
+            margin-right: 3px;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and #{$width1800} {
+    &-btns {
+      padding-top: 2px;
+
+      &--footer {
+        margin-left: 2px;
+
+        .social-btn{
+          &--in {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
+}

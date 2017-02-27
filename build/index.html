@@ -1,27 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Home page</title>
-    <meta content="" name="author">
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="/assets/css/foundation.css">
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="stylesheet" href="/assets/css/spritePng.css">
-    <link rel="stylesheet" href="/assets/css/spriteGif.css">
-    <script src="/assets/js/foundation.js" defer></script>
-    <script src="/assets/js/app.js" defer></script><!--[if lt IE 9]>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <title>Личный сайт</title>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="greating">
-        <div class="greating_text">Hello! I'm your training builder.</div>
-        <div class="greating_picture"></div>
-      </div>
+    <div class="index__wrapper">
+      <input class="index__switcher" id="switcher-index" type="checkbox" name="switcher-index">
+      <header class="index__header">
+        <label class="index__authoriz" for="switcher-index">Авторизоваться</label>
+      </header>
+      <main class="page-main">
+        <div class="flipper">
+          <div class="authoriz">
+            <h1 class="title title--small title--login">Авторизуйтесь</h1>
+            <form class="authoriz__form" method="POST" action="#">
+              <div class="authoriz__enter">
+                <input class="authoriz__login" id="name" type="text" name="login" placeholder="Логин">
+                <label class="authoriz__label authoriz__label--enter" for="name">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#login"></use>
+                  </svg>
+                </label>
+              </div>
+              <div class="authoriz__enter authoriz__enter--last">
+                <input class="authoriz__password" id="password" type="password" name="password" placeholder="Пароль">
+                <label class="authoriz__label authoriz__label--enter" for="password">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#password"></use>
+                  </svg>
+                </label>
+              </div>
+              <fieldset class="authoriz__checkout">
+                <input id="human" type="checkbox" name="login">
+                <label class="authoriz__label authoriz__label--check" for="human">Я человек</label>
+              </fieldset>
+              <fieldset class="authoriz__checkout authoriz__checkout--last">
+                <legend class="authoriz__legend">Вы точно не робот?</legend>
+                <input id="radio-yes" type="radio" name="answer" value="yes">
+                <label class="authoriz__label authoriz__label--radio" for="radio-yes">Да</label>
+                <input id="radio-no" type="radio" name="answer" value="no">
+                <label class="authoriz__label authoriz__label--radio" for="radio-no">Не уверен</label>
+              </fieldset>
+              <div class="btn">
+                <label class="btn__item btn__item--index" for="switcher-index">На главную</label>
+                <button class="btn__item btn__item--enter" type="submit">Войти</button>
+              </div>
+            </form>
+          </div>
+          <div class="welcome-section">
+            <div class="info--index info">
+              <div class="info__image"><img src="assets/img/avatar.jpg" width="141" height="141" alt="Это я!"></div>
+              <h2 class="info__name">Владимир Астахов</h2>
+              <p class="info__desc">Личный сайт веб разработчика</p>
+            </div>
+            <div class="social-btns social-btns--index"><a class="social-btn social-btn--vk" href="http://vk.com" target="_blank"><span>vkontakte</span>
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#vk"></use>
+                </svg></a><a class="social-btn social-btn--git" href="http://github.com" target="_blank"><span>github</span>
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#github"></use>
+                </svg></a><a class="social-btn social-btn--in" href="http://linkedin.com" target="_blank"><span>linkedin</span>
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#in"></use>
+                </svg></a></div>
+            <div class="btn"><a class="btn__item btn__item--works" href="works.html">Мои работы</a><a class="btn__item btn__item--about" href="about.html">Обо мне</a><a class="btn__item btn__item--blog" href="blog-page.html">Блог</a></div>
+          </div>
+        </div>
+      </main>
+      <footer class="page-footer page-footer--index">
+        <p class="page-footer__author page-footer__author--index">© Владимир Астахов | Создано с любовью в LoftSchool | 2016</p>
+      </footer>
     </div>
   </body>
 </html>

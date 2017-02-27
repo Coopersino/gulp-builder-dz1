@@ -1,0 +1,181 @@
+.reviews {
+  background: #fff url('../img/background-works-phone.jpg') no-repeat center 267px;
+  padding-bottom: 449px;
+
+  &__items {
+    margin: 0 auto 33px;
+    max-width: 420px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  &__item {
+    @include fonts(14px, 400, 24px, $chicago);
+    font-style: italic;
+    margin-bottom: 31px;
+
+    &:last-child {
+      margin-bottom: 0;
+
+      .reviews__quote {
+        padding-left: 0;
+        min-height: 72px;
+      }
+
+      .reviews__name {
+        text-indent: 0;
+      }
+
+      .reviews__who {
+        text-indent: -3px;
+      }
+    }
+
+  }
+
+  &__avatar {
+    display: block;
+    width: 51px;
+    margin: 0 auto 11px;
+
+    img {
+      display: block;
+      border-radius: 50%;
+    }
+  }
+
+  &__quote {
+    margin: 0 0 7px;
+    padding-left: 1px;
+    text-align: left;
+    min-height: 96px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: url('../img/quotes.png');
+      top: -22px;
+      left: 0;
+      width: 75px;
+      height: 61px;
+    }
+  }
+
+  &__who-say {
+    display: block;
+  }
+
+  &__name {
+    color: $fermGreen;
+    display: block;
+    font-weight: 700;
+    line-height: 24px;
+    text-indent: 8px;
+  }
+
+  &__status {
+    color: $capeCode;
+    display: block;
+    line-height: 24px;
+    text-indent: 5px;
+  }
+
+  @media only screen and #{$width768} {
+    background: #f4f5f0 url('../img/background-works-tablet.png') no-repeat center 241px;
+    padding-bottom: 390px;
+
+    &__items {
+      display: flex;
+      justify-content: space-around;
+      margin: 0 auto 44px;
+      max-width: 1000px;
+      padding: 0 23px;
+    }
+
+    &__item {
+      flex-basis: 348px;
+      margin-bottom: 0;
+      margin-right: 26px;
+
+      &:last-child {
+        margin-right: 0;
+
+        .reviews__quote {
+          padding-left: 0;
+        }
+
+        .reviews__name {
+          text-indent: 0;
+        }
+
+        .reviews__who {
+          text-indent: -3px;
+        }
+      }
+
+    }
+
+    &__avatar {
+      display: block;
+      width: 77px;
+      margin-bottom: 15px;
+    }
+
+    &__quote {
+      padding-left: 1px;
+      min-height: 72px;
+    }
+
+    &__name {
+      font-size: 16px;
+      text-indent: 2px;
+    }
+
+    &__status {
+      font-size: 16px;
+      text-indent: -2px;
+    }
+  }
+
+  @media only screen and #{$width1200} {
+    background-color: #f4f5f0;
+    background-image:
+            url('../img/background-works-desktop.png'),
+            url('../img/lists.png');
+    background-repeat: no-repeat;
+    background-position: center 320px, center 88px;
+    padding-bottom: 338px;
+
+    &__items {
+      margin: 0 auto 65px;
+      max-width: 1200px;
+      padding: 0 210px;
+    }
+
+    &__item {
+      font-size: 16px;
+      line-height: 26px;
+      margin-right: 20px;
+      flex-basis: 380px;
+    }
+
+    &__avatar {
+      width: 77px;
+      margin-bottom: 15px;
+    }
+
+    &__quote {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media only screen and #{$width1800} {
+    background-color: #f4f5f0;
+    background-image:
+            url('../img/background-works-big.png'),
+            url('../img/lists.png');
+    background-repeat: no-repeat;
+    background-position: center 320px, center 88px
+  }
+}
