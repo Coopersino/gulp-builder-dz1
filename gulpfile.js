@@ -8,9 +8,13 @@ global.$ = {
         jsFoundation: require('./gulp/paths/js.foundation.js'),
         cssFoundation: require('./gulp/paths/css.foundation.js'),
         app: require('./gulp/paths/app.js')
+        // slider: require('./gulp/paths/slider.js')
     },
     gulp: require('gulp'),
     del: require('del'),
+    named: require('vinyl-named'),
+    plumber: require('gulp-plumber'),
+    webpack: require('gulp-webpack'),
     browserSync: require('browser-sync').create(),
     gp: require('gulp-load-plugins')()
 };
@@ -21,7 +25,14 @@ $.path.task.forEach(function(taskPath) {
 
 $.gulp.task('default', $.gulp.series(
     'clean',
-
+    $.gulp.parallel(
+        // 'js:slider',
+        'copy_json'
+    ),
+    $.gulp.parallel(
+        // 'js:slider',
+        'js:webpack'
+    ),
     $.gulp.parallel(
         'sass',
         'pug',

@@ -6,7 +6,9 @@ html(lang='ru')
         link(rel='stylesheet', href='assets/css/app.css')
         title Мои работы
     body
+        include ../blocks/preloader.pug
         .wrapper
+            input#switcher-overlay.wrapper__switcher(type='checkbox', name='switcher-overlay')
             header#header.page-header
                 a.page-header__arrow(href='#footer')
                 .page-header__menu
@@ -23,6 +25,7 @@ html(lang='ru')
                             span linkedin
                             svg
                                 use(xlink:href='assets/img/sprite.svg#in')
+                    include ../blocks/burger-menu.pug
                 .info
                     .info__image
                         img(src='assets/img/avatar.jpg', width='141', height='141', alt='Это я!')
@@ -33,7 +36,7 @@ html(lang='ru')
             main.page-main
                 h1.title.title--big.title--works.
                     Мои работы
-                section.slider
+                include ../blocks/slider.pug
                 section.reviews
                     h2.title.title--big.title--say Что обо мне говорят
                     .reviews__items
@@ -48,7 +51,7 @@ html(lang='ru')
                                 span.reviews__name Ковальчук Дмитрий
                                 span.reviews__status — основатель Loftschool
                         article.reviews__item
-                            picture.reviews_avatar
+                            picture.reviews__avatar
                                 source(media='(min-width:768px)', srcset='assets/img/zaharov.jpg')
                                 img(src='assets/img/zaharov-phone.jpg', alt='Зар Захаров')
                             blockquote.reviews__quote.
@@ -109,3 +112,4 @@ html(lang='ru')
                         cite.page-footer__quote-author – Martin Golding
                 p.page-footer__author.
                     © Владимир Астахов | Создано с любовью в LoftSchool | 2016
+    script(src='assets/js/works.js')

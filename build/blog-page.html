@@ -7,7 +7,11 @@
     <title>Мой блог</title>
   </head>
   <body>
+    <div class="preloader preloader--hidden">
+      <div class="preloader__container"><?xml version="1.0" encoding="utf-8"?><!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="80px" height="95.113px" viewBox="0 0 80 95.113" enable-background="new 0 0 80 95.113" xml:space="preserve" class="wave"><g class="wave__item wave__item--first"><path fill="none" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005"/></g><g class="wave__item wave__item--second"><path fill="none" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684"/></g><g class="wave__item wave__item--third"><path fill="none" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362"/></g><text transform="matrix(1 0 0 1 19.9785 20.5957)" font-family="'ArialMT'" font-size="24">0</text></svg></div>
+    </div>
     <div class="wrapper">
+      <input class="wrapper__switcher" type="checkbox" name="switcher-overlay" id="switcher-overlay">
       <header class="page-header--blog page-header" id="header"><a class="page-header__arrow" href="#footer"></a>
         <div class="page-header__menu">
           <div class="social-btns"><a class="social-btn social-btn--vk" href="http://vk.com" target="_blank"><span>vkontakte</span>
@@ -20,6 +24,7 @@
               <svg>
                 <use xlink:href="assets/img/sprite.svg#in"></use>
               </svg></a></div>
+          <label class="burger" for="switcher-overlay"><span class="burger__component">burger-menu</span></label>
         </div>
         <div class="info">
           <div class="info__image"><img src="assets/img/avatar.jpg" width="141" height="141" alt="Это я!"></div>
@@ -29,108 +34,26 @@
       </header>
       <main class="page-main page-main--blog">
         <div class="public">
-          <aside class="public__nav"><span class="public__nav-btn" style="top: 57px;"></span>
-            <ul class="public__nav-items public__nav-items--fixed">
-              <li class="public__nav-item public__nav-item--active"><a href="/blog-page.html#sass">Самое важное в SASS</a></li>
-              <li class="public__nav-item"><a href="/blog-page.html#recipe">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
-              <li class="public__nav-item"><a href="/blog-page.html#gulp">Самый необходимый набор Gulp плагинов</a></li>
-              <li class="public__nav-item"><a href="#jade">Почему я выбрал Jade</a></li>
-            </ul>
-          </aside>
-          <section class="public__items">
-            <div class="public__item" id="sass">
-              <h2 class="public__title">Самое важное в SASS</h2>
-              <div class="public__date"><span class="public__item__date-value">22 ноября 2016</span></div>
-              <div class="public__content">
-                <p class="public-item__paragraph">
-                  Таким образом начало по вседневной работы по формированию позиции позволяет выполнять важные
-                  задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт
-                  новая модель организационной деятельности играет важную роль в формировании новых
-                  предложений. Товарищи! новая модель организационной деятельности играет важную роль в
-                  формировании систем массового участия.
-                </p>
-                <p class="public-item__paragraph">
-                  Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому
-                  кругу (специалистов) участие в формировании систем массового участия. Идейные соображения
-                  высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу
-                  (специалистов) участие в формировании позиций, занимаемых участниками в отношении
-                  поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности
-                  способствует подготовки и реализации модели развития. С другой стороны рамки и место
-                  обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров,
-                  соответствует насущным потребностям.
-                </p>
-              </div>
+          <aside class="public__nav"></aside>
+          <main class="page-main page-main--blog">
+            <div class="public">
+              <aside class="public__nav">
+<span class="public__nav-btn"></span>
+                <ul class="public__nav-items"></ul>
+              </aside>
+              <section class="public__items"></section>
+              <template id="template-navigation">
+                <li class="public__nav-item"><a href="#"></a></li>
+              </template>
+              <template id="template-publication">
+                <div class="public__item">
+                  <h2 class="public__title"></h2>
+                  <time class="public__date"></time>
+                  <div class="public__content"></div>
+                </div>
+              </template>
             </div>
-            <div class="public__item" id="recipe">
-              <h2 class="public__title">Приёмы в вёрстке, без которых не обходится ни один сайт</h2>
-              <time class="public__date">13 ноября 2016</time>
-              <div class="public__content">
-                <p class="public__paragraph">
-                  Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные
-                  задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт
-                  новая модель организационной деятельности играет важную роль в формировании новых
-                  предложений. Товарищи! новая модель организационной деятельности играет важную роль в
-                  формировании систем массового участия.
-                </p>
-                <p class="public__paragraph">
-                  Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому
-                  кругу (специалистов) участие в формировании систем массового участия. Идейные соображения
-                  высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу
-                  (специалистов) участие в формировании позиций, занимаемых участниками в отношении
-                  поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности
-                  способствует подготовки и реализации модели развития. С другой стороны рамки и место
-                  обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров,
-                  соответствует насущным потребностям.
-                </p>
-              </div>
-            </div>
-            <div class="public__item" id="gulp">
-              <h2 class="public__title">Самый необходимый набор Gulp плагинов</h2>
-              <time class="public__date">13 ноября 2016</time>
-              <div class="public__content">
-                <p class="public__paragraph">
-                  Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные
-                  задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт
-                  новая модель организационной деятельности играет важную роль в формировании новых
-                  предложений. Товарищи! новая модель организационной деятельности играет важную роль в
-                  формировании систем массового участия.
-                </p>
-                <p class="public__paragraph">
-                  Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому
-                  кругу (специалистов) участие в формировании систем массового участия. Идейные соображения
-                  высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу
-                  (специалистов) участие в формировании позиций, занимаемых участниками в отношении
-                  поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности
-                  способствует подготовки и реализации модели развития. С другой стороны рамки и место
-                  обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров,
-                  соответствует насущным потребностям.
-                </p>
-              </div>
-            </div>
-            <div class="public__item" id="jade">
-              <h2 class="public__title">Почему я выбрал Jade</h2>
-              <time class="public__date">13 ноября 2016</time>
-              <div class="public__content">
-                <p class="public__paragraph">
-                  Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные
-                  задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт
-                  новая модель организационной деятельности играет важную роль в формировании новых
-                  предложений. Товарищи! новая модель организационной деятельности играет важную роль в
-                  формировании систем массового участия.
-                </p>
-                <p class="public__paragraph">
-                  Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому
-                  кругу (специалистов) участие в формировании систем массового участия. Идейные соображения
-                  высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу
-                  (специалистов) участие в формировании позиций, занимаемых участниками в отношении
-                  поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности
-                  способствует подготовки и реализации модели развития. С другой стороны рамки и место
-                  обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров,
-                  соответствует насущным потребностям.
-                </p>
-              </div>
-            </div>
-          </section>
+          </main>
         </div>
       </main>
       <div class="overlay">
@@ -164,5 +87,6 @@
         <p class="page-footer__author">© Владимир Астахов | Создано с любовью в LoftSchool | 2016</p>
       </footer>
     </div>
+    <script src="assets/js/blog.js"></script>
   </body>
 </html>

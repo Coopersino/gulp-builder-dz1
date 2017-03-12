@@ -1,0 +1,7 @@
+include ../vars
+
+    .overlay-menu
+        .overlay-menu__links
+            each link in links
+                = '\n'
+                a(href=link.href class='overlay__link overlay__link--' + link.name)= link.content

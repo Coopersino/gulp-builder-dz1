@@ -6,7 +6,10 @@ html(lang='ru')
         link(rel='stylesheet', href='assets/css/app.css')
         title Личный сайт
     body
+        include ../blocks/preloader.pug
         .index__wrapper
+            .Background
+                canvas.Background-canvas
             input#switcher-index.index__switcher(type='checkbox', name='switcher-index')
             header.index__header
                 label.index__authoriz(for='switcher-index') Авторизоваться
@@ -67,3 +70,5 @@ html(lang='ru')
             footer.page-footer.page-footer--index
                 p.page-footer__author.page-footer__author--index.
                     © Владимир Астахов | Создано с любовью в LoftSchool | 2016
+        script(src='assets/js/water.js')
+        script(src='assets/js/index.js')

@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Сайт школы онлайн Образования",
+    "techno": ["html" , "css", "javascript"],
+    "link": "#",
+    "img": "assets/img/work-1.png"
+  },
+  {
+    "title": "Сайт itloft",
+    "techno": ["html" , "css", "javascript"],
+    "link": "#",
+    "img": "assets/img/work-2.png"
+  },
+  {
+    "title": "Портал видеоуроков",
+    "techno": ["html" , "css", "javascript"],
+    "link": "#",
+    "img": "assets/img/work-3.png"
+  },
+  {
+    "title": "Сайт о йоге",
+    "techno": ["html" , "css", "javascript"],
+    "link": "#",
+    "img": "assets/img/work-4.png"
+  }
+]

@@ -6,7 +6,9 @@ html(lang='ru')
         link(rel='stylesheet', href='assets/css/app.css')
         title Мой блог
     body
+        include ../blocks/preloader.pug
         .wrapper
+            input(type='checkbox' name='switcher-overlay' id='switcher-overlay').wrapper__switcher
             header#header.page-header--blog.page-header
                 a.page-header__arrow(href='#footer')
                 .page-header__menu
@@ -23,6 +25,7 @@ html(lang='ru')
                             span linkedin
                             svg
                                 use(xlink:href='assets/img/sprite.svg#in')
+                    include ../blocks/burger-menu.pug
                 .info
                     .info__image
                         img(src='assets/img/avatar.jpg', width='141', height='141', alt='Это я!')
@@ -31,25 +34,9 @@ html(lang='ru')
             main.page-main.page-main--blog
                 .public
                     aside.public__nav
-                        span.public__nav-btn(style='top: 57px;')
-                        ul.public__nav-items.public__nav-items--fixed
-                            li.public__nav-item.public__nav-item--active
-                                a(href='#sass').
-                                    Самое важное в SASS
-                            li.public__nav-item
-                                a(href='#recipe').
-                                    Приёмы в вёрстке, без которых не обходится ни один сайт
-                            li.public__nav-item
-                                a(href='#gulp').
-                                    Самый необходимый набор Gulp плагинов
-                            li.public__nav-item
-                                a(href='#jade').
-                                    Почему я выбрал Jade
-                    section.public__items
-                        include ../articles/article1
-                        include ../articles/article2
-                        include ../articles/article3
-                        include ../articles/article4
+                    block content
+                        main.page-main.page-main--blog
+                            include ../blocks/publication.pug
             .overlay
                 .overlay__links
                     a.overlay__link.overlay__link--works(href='works.html') Мои работы
@@ -87,3 +74,4 @@ html(lang='ru')
                         cite.page-footer__quote-author – Martin Golding
                 p.page-footer__author.
                     © Владимир Астахов | Создано с любовью в LoftSchool | 2016
+        script(src='assets/js/blog.js')

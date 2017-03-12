@@ -1,0 +1,56 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: url('../img/preloader-bg.jpg') no-repeat center / cover;
+
+  &__container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  & + div[class$='wrapper'] {
+    visibility: collapse;
+  }
+
+  &--hidden {
+    display: none;
+
+    & + div[class$='wrapper'] {
+      visibility: visible;
+    }
+  }
+}
+
+.wave {
+  fill: #fff;
+
+  &__item {
+    animation: wave 1.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+    stroke-dasharray: 100px;
+    stroke-dashoffset: 100px;
+
+    &--second {
+      animation-delay: .2s;
+    }
+
+    &--third {
+      animation-delay: .6s;
+    }
+  }
+}
+
+@keyframes wave {
+  from {
+    stroke-dashoffset: 100px;
+  }
+
+  to{
+    stroke-dashoffset: -100px;
+  }
+}

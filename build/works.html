@@ -7,7 +7,11 @@
     <title>Мои работы</title>
   </head>
   <body>
+    <div class="preloader preloader--hidden">
+      <div class="preloader__container"><?xml version="1.0" encoding="utf-8"?><!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="80px" height="95.113px" viewBox="0 0 80 95.113" enable-background="new 0 0 80 95.113" xml:space="preserve" class="wave"><g class="wave__item wave__item--first"><path fill="none" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005"/></g><g class="wave__item wave__item--second"><path fill="none" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684"/></g><g class="wave__item wave__item--third"><path fill="none" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362"/></g><text transform="matrix(1 0 0 1 19.9785 20.5957)" font-family="'ArialMT'" font-size="24">0</text></svg></div>
+    </div>
     <div class="wrapper">
+      <input class="wrapper__switcher" id="switcher-overlay" type="checkbox" name="switcher-overlay">
       <header class="page-header" id="header"><a class="page-header__arrow" href="#footer"></a>
         <div class="page-header__menu">
           <div class="social-btns"><a class="social-btn social-btn--vk" href="http://vk.com" target="_blank"><span>vkontakte</span>
@@ -20,6 +24,7 @@
               <svg>
                 <use xlink:href="assets/img/sprite.svg#in"></use>
               </svg></a></div>
+          <label class="burger" for="switcher-overlay"><span class="burger__component">burger-menu</span></label>
         </div>
         <div class="info">
           <div class="info__image"><img src="assets/img/avatar.jpg" width="141" height="141" alt="Это я!"></div>
@@ -29,7 +34,22 @@
       </header>
       <main class="page-main">
         <h1 class="title title--big title--works">Мои работы</h1>
-        <section class="slider"></section>
+        <section class="slider">
+          <div class="slider__descs">
+            <div class="slider__desc">
+              <h4 class="title title--small title--slider"></h4>
+              <ul class="slider__techno"></ul>
+<a class="slider__btn" href="">Посмотреть сайт</a>
+            </div>
+          </div>
+          <div class="slider__img">
+            <div class="slider__img"></div>
+          </div>
+          <div class="slider__controls">
+            <div class="slider__control slider__control--prev"></div>
+            <div class="slider__control slider__control--next"></div>
+          </div>
+        </section>
         <section class="reviews">
           <h2 class="title title--big title--say">Что обо мне говорят</h2>
           <div class="reviews__items">
@@ -44,7 +64,7 @@
               <cite class="reviews__who-say"><span class="reviews__name">Ковальчук Дмитрий</span><span class="reviews__status">— основатель Loftschool</span></cite>
             </article>
             <article class="reviews__item">
-              <picture class="reviews_avatar">
+              <picture class="reviews__avatar">
                 <source media="(min-width:768px)" srcset="assets/img/zaharov.jpg"><img src="assets/img/zaharov-phone.jpg" alt="Зар Захаров">
               </picture>
               <blockquote class="reviews__quote">
@@ -103,4 +123,5 @@
       </footer>
     </div>
   </body>
+  <script src="assets/js/works.js"></script>
 </html>

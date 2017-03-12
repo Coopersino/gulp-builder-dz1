@@ -6,12 +6,14 @@ html(lang='ru')
         link(rel='stylesheet', href='assets/css/app.css')
         title Обо мне
     body
+        include ../blocks/preloader.pug
         .wrapper
+            input#switcher-overlay.wrapper__switcher(type='checkbox', name='switcher-overlay')
             header#header.page-header--about.page-header
                 a.page-header__arrow(href='#footer')
                 .page-header__menu
                     .social-btns
-                        a.social-btn.social-btn--vk(href='http://vk.com', target='_blank')
+                        a.social-btn.social-btn--vk(href='https://vk.com/sheshin_vitaliy', target='_blank')
                             span vkontakte
                             svg
                                 use(xlink:href='assets/img/sprite.svg#vk')
@@ -23,6 +25,7 @@ html(lang='ru')
                             span linkedin
                             svg
                                 use(xlink:href='assets/img/sprite.svg#in')
+                    include ../blocks/burger-menu.pug
                 .info
                     .info__image
                         img(src='assets/img/avatar.jpg', width='141', height='141', alt='Это я!')
@@ -111,7 +114,7 @@ html(lang='ru')
                 .overlay__links
                     a.overlay__link.overlay__link--works(href='works.html') Мои работы
                     a.overlay__link.overlay__link--about(href='about.html') Обо мне
-                    a.overlay__link.overlay__link--blog(href='blog.html') Блог
+                    a.overlay__link.overlay__link--blog(href='blog-page.html') Блог
                     a.overlay__link.overlay__link--authoriz(href='index.html') Авторизация
             footer#footer.page-footer
                 .page-footer__wrapper
@@ -125,7 +128,7 @@ html(lang='ru')
                             a.page-footer__link(href='blog-page.html') Блог
                             a.page-footer__link(href='index.html') Авторизация
                         .social-btns.social-btns--footer
-                            a.social-btn.social-btn--vk(href='http://vk.com', target='_blank')
+                            a.social-btn.social-btn--vk(href='https://vk.com/sheshin_vitaliy', target='_blank')
                                 span vkontakte
                                 svg
                                     use(xlink:href='assets/img/sprite.svg#vk')
@@ -145,3 +148,5 @@ html(lang='ru')
                         cite.page-footer__quote-author – Martin Golding
                 p.page-footer__author.
                     © Владимир Астахов | Создано с любовью в LoftSchool | 2016
+        script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBvAj1dNQzbKLdKsNv2J-44xEHW5bJKLSc')
+        script(src='assets/js/about.js')

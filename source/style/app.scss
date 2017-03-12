@@ -58,7 +58,65 @@ ul li {
   z-index: 10;
 }
 
+@keyframes showWithOpacity {
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin showWithScaleAndOpacity() {
+  animation-name: showWithScale, showWithOpacity;
+  animation-duration: .2s, .4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@mixin showWithOpacity() {
+  animation-name: showWithOpacity;
+  animation-duration: .5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showPrev {
+  from {
+    top: -100%;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+@keyframes showNext {
+  from {
+    top: 100%;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+@mixin showPrev(){
+  animation-name: showPrev;
+  animation-duration: .5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@mixin showNext(){
+  animation-name: showNext;
+  animation-duration: .5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
 @import "common/fonts";
+@import "common/background";
+@import "common/preloader";
+@import "common/wrapper";
+@import "common/burger-menu";
 @import "common/_page-header";
 @import "common/_index";
 @import "common/_page-footer";
@@ -80,4 +138,5 @@ ul li {
 @import "common/_resume";
 @import "common/reviews";
 @import "common/public";
+@import "common/slider";
 @import "common/overlay";

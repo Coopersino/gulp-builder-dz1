@@ -7,10 +7,14 @@
     <title>Обо мне</title>
   </head>
   <body>
+    <div class="preloader preloader--hidden">
+      <div class="preloader__container"><?xml version="1.0" encoding="utf-8"?><!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="80px" height="95.113px" viewBox="0 0 80 95.113" enable-background="new 0 0 80 95.113" xml:space="preserve" class="wave"><g class="wave__item wave__item--first"><path fill="none" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005"/></g><g class="wave__item wave__item--second"><path fill="none" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684"/></g><g class="wave__item wave__item--third"><path fill="none" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362"/></g><text transform="matrix(1 0 0 1 19.9785 20.5957)" font-family="'ArialMT'" font-size="24">0</text></svg></div>
+    </div>
     <div class="wrapper">
+      <input class="wrapper__switcher" id="switcher-overlay" type="checkbox" name="switcher-overlay">
       <header class="page-header--about page-header" id="header"><a class="page-header__arrow" href="#footer"></a>
         <div class="page-header__menu">
-          <div class="social-btns"><a class="social-btn social-btn--vk" href="http://vk.com" target="_blank"><span>vkontakte</span>
+          <div class="social-btns"><a class="social-btn social-btn--vk" href="https://vk.com/sheshin_vitaliy" target="_blank"><span>vkontakte</span>
               <svg>
                 <use xlink:href="assets/img/sprite.svg#vk"></use>
               </svg></a><a class="social-btn social-btn--git" href="http://github.com" target="_blank"><span>github</span>
@@ -20,6 +24,7 @@
               <svg>
                 <use xlink:href="assets/img/sprite.svg#in"></use>
               </svg></a></div>
+          <label class="burger" for="switcher-overlay"><span class="burger__component">burger-menu</span></label>
         </div>
         <div class="info">
           <div class="info__image"><img src="assets/img/avatar.jpg" width="141" height="141" alt="Это я!"></div>
@@ -108,7 +113,7 @@
         </div>
       </main>
       <div class="overlay">
-        <div class="overlay__links"><a class="overlay__link overlay__link--works" href="works.html">Мои работы</a><a class="overlay__link overlay__link--about" href="about.html">Обо мне</a><a class="overlay__link overlay__link--blog" href="blog.html">Блог</a><a class="overlay__link overlay__link--authoriz" href="index.html">Авторизация</a></div>
+        <div class="overlay__links"><a class="overlay__link overlay__link--works" href="works.html">Мои работы</a><a class="overlay__link overlay__link--about" href="about.html">Обо мне</a><a class="overlay__link overlay__link--blog" href="blog-page.html">Блог</a><a class="overlay__link overlay__link--authoriz" href="index.html">Авторизация</a></div>
       </div>
       <footer class="page-footer" id="footer">
         <div class="page-footer__wrapper">
@@ -118,7 +123,7 @@
           </p>
           <div class="page-footer__links-content">
             <div class="page-footer__links"><a class="page-footer__link" href="works.html">Мои работы</a><a class="page-footer__link" href="about.html">Обо мне</a><a class="page-footer__link" href="blog-page.html">Блог</a><a class="page-footer__link" href="index.html">Авторизация</a></div>
-            <div class="social-btns social-btns--footer"><a class="social-btn social-btn--vk" href="http://vk.com" target="_blank"><span>vkontakte</span>
+            <div class="social-btns social-btns--footer"><a class="social-btn social-btn--vk" href="https://vk.com/sheshin_vitaliy" target="_blank"><span>vkontakte</span>
                 <svg>
                   <use xlink:href="assets/img/sprite.svg#vk"></use>
                 </svg></a><a class="social-btn social-btn--git" href="http://github.com" target="_blank"><span>github</span>
@@ -141,5 +146,7 @@
         <p class="page-footer__author">© Владимир Астахов | Создано с любовью в LoftSchool | 2016</p>
       </footer>
     </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvAj1dNQzbKLdKsNv2J-44xEHW5bJKLSc"></script>
+    <script src="assets/js/about.js"></script>
   </body>
 </html>

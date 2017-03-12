@@ -1,0 +1,68 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  overflow-x: hidden;
+  transition: padding-left 1s;
+
+  &__switcher {
+    display: none;
+
+    &:checked ~ .overlay {
+      display: block;
+    }
+
+    &:checked ~ .page-header {
+      .burger {
+        position: fixed;
+        right: 10px;
+        top: 9px;
+        z-index: 60;
+
+        &__component {
+          background-color: transparent;
+
+          &::after,
+          &::before {
+            width: 35px;
+          }
+
+          &::after {
+            left: -8px;
+            top: 15px;
+            transform: rotate(45deg);
+          }
+
+          &::before {
+            left: -11px;
+            top: -9px;
+            transform: rotate(-45deg);
+          }
+        }
+
+        @media only screen and #{$width768} {
+          right: 30px;
+          top: 30px;
+
+          &__component {
+
+            &::after,
+            &::before {
+              width: 50px;
+            }
+
+            &::after {
+              left: -11px;
+              top: 19px;
+            }
+
+            &::before {
+              left: -14px;
+              top: -17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
